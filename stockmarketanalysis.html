@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Editorial by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Home</strong></a>
+									
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Functional LSTM Model For Stock Market movement prediction</h1>
+									</header>
+
+									<!-- Content -->
+										
+										
+										<div class="table-wrapper">
+								
+											
+										<h2>Model Summary</h2>
+										<p>The model uses keras functional api to take multiple inputs and classify whether the next day stock price would go up or down. The model takes the previous 5 days closing price as an input and the previous day tweets average sentiment as another input.</p>
+										<span class="image fit"><img src="StockmarketImages/modelsummary.png" alt="model" /></span>
+										</div>	
+                                        
+                                        <div><span class="image fit"><img src="StockmarketImages/model.png" alt="model" /></span></div>
+										
+                                        
+										
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4">
+													<h2>training accuracy</h2>
+													<span class="image fit"><img src="StockmarketImages/modeltrainingacc.png" alt="acc" /></span>
+												</div>
+												<div class="col-4">
+													<h2>training loss</h2>
+													<span class="image fit"><img src="StockmarketImages/modeltrainingloss.png" alt="loss" /></span>
+												</div>
+											
+												
+											</div>
+										</div>
+										<h1>Sequential LSTM Model prediction stock price movement</h1>
+										<h2>Model Summary</h2>
+										<p>The model uses LSTM layers to classify whether stock price would go up or down by taking the previous 5 days stock price as input.</p>
+										<span class="image fit"><img src="StockmarketImages/model2summary.png" alt="model" /></span>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4">
+													<h2>training accuracy</h2>
+													<span class="image fit"><img src="StockmarketImages/model2trainingacc.png" alt="acc" /></span>
+												</div>
+												<div class="col-4">
+													<h2>training loss</h2>
+													<span class="image fit"><img src="StockmarketImages/model2loss.png" alt="loss" /></span>
+												</div>
+											
+												
+											</div>
+										</div>
+										<h3>CODE:</h3>
+										<a href="https://github.com/Shouvik-7/stock_market_movement_predictor/tree/main">https://github.com/Shouvik-7/stock_market_movement_predictor/tree/main</a>
+                                    <hr class="major" />
+									
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="introduction.html">Introduction</a></li>
+										
+										<li>
+											<span class="opener">Sentiment Analysis</span>
+											<ul>
+												<li><a href="sadataprep.html">Data and prep</a></li>
+												<li><a href="saanalysis.html">Analysis</a></li>
+												<li><a href="saresults.html">Results</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Stock Forecasting</span>
+											<ul>
+												<li><a href="stockpreddataprep.html">Data and prep</a></li>
+												<li><a href="stockmarketanalysis.html">Analysis</a></li>
+												<li><a href="stockmarketresults.html">Results</a></li>
+											</ul>
+										</li>
+										<li><a href="conclusion.html">Conclusion</a></li>
+
+									</ul>
+								</nav>
+
+						
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>About</h2>
+									</header>
+									<p>Name: Shouvik Sengupta</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="shouvik.sengupta@colorado.edu">shouvik.sengupta@colorado.edu</a></li>
+										<li class="icon solid fa-home">Boulder, CU 80303</li>
+										<ul class="icons">
+											
+											<li><a href="https://www.linkedin.com/in/shouvik-sengupta-s17/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+										</ul>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash, pexels</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

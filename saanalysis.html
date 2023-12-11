@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Editorial by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Home</strong></a>
+									
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>LSTM Model For Sentiment Analysis</h1>
+									</header>
+
+									<!-- Content -->
+										
+										
+										<div class="table-wrapper">
+								
+											
+										<h2>Model Summary</h2>
+										<span class="image fit"><img src="SentimentAnalysisImages/LSTMModel.png" alt="model" /></span>
+										</div>	
+                                        
+                                        <div><span class="image fit"><img src="SentimentAnalysisImages/accuracylstm.png" alt="accuracy" /></span></div>
+										
+                                        <div><span class="image fit"><img src="SentimentAnalysisImages/losslstm.png" alt="loss" /></span></div>
+										<p>An LSTM model chosen as LSTM works well with time series data. The stock prices are temporal in nature and therefore, theoritically LSTM should give good results. LSTMs also perform well in remembering relevant past information over time.</p>
+										<p>The LSTM model for sentiment classification is designed using the Keras framework. The model begins with an input layer expecting sequences of GloVe word embeddings, each with a shape of (50, 50) to accommodate the truncated and padded tweet data. Subsequently, an LSTM layer with 30 units and the 'return_sequences=True' parameter is employed to capture sequential dependencies in the input data. A dropout layer with a rate of 0.2 is added to mitigate overfitting. The output from the LSTM layer is then flattened to a one-dimensional array, and a dense layer with a single neuron and a sigmoid activation function is appended to produce a binary sentiment classification output (1 for positive sentiment, 0 for negative sentiment). The model is compiled using the Adam optimizer, making it ready for training on labeled tweet data for sentiment analysis.</p>
+
+                                        <h1>BERT Model For Sentiment Analysis</h1>
+                                        <p>Base Model</p>
+                                        <a href="https://huggingface.co/ProsusAI/finbert">https://huggingface.co/ProsusAI/finbert</a>
+                                        <span class="image fit"><img src="SentimentAnalysisImages/BERTModelSummary.png" alt="bertmodel" /></span>
+                                        <p>FinBERT is a pre-trained NLP model to analyze sentiment of financial text. It is built by further training the BERT language model in the finance domain, using a large financial corpus and thereby fine-tuning it for financial sentiment classification. Financial PhraseBank by Malo et al. (2014) is used for fine-tuning. For more details, please see the paper FinBERT: Financial Sentiment Analysis with Pre-trained Language Models and our related blog post on Medium.
+
+											The model will give softmax outputs for three labels: positive, negative or neutral.</p>
+										
+										<p>Bert Models performs well on text data. Naturally, its popular choice to select a bert model thats already finetuned on financial data. The complex architecture should perform well on the given dataset due to the attention mechanism, positional encoding and masking.</p>
+											<h3>
+											Bert
+										</h3>
+											<p>
+												BERT, or Bidirectional Encoder Representations from Transformers, is a powerful natural language processing (NLP) model developed by Google. It belongs to the transformer architecture, which excels in capturing contextual information from both left and right contexts in a given text. What sets BERT apart is its bidirectional training, allowing it to understand the meaning of a word based on its surrounding words in a sentence. This bidirectionality enables BERT to grasp intricate contextual nuances and relationships, making it highly effective for a variety of NLP tasks such as sentiment analysis, question answering, and text summarization. BERT is pre-trained on massive amounts of data and can be fine-tuned for specific tasks, making it a versatile and widely adopted model in the field of natural language understanding.</p>
+										
+										<span class="image fit"><img src="StockmarketImages/new_BERT_Overall.jpg" alt="bertmodeltuining" /></span>
+										<p>
+											Fine-tuning BERT (Bidirectional Encoder Representations from Transformers) for text classification involves taking a pre-trained BERT model and adapting it to a specific text classification task. BERT is a powerful language representation model that has been pre-trained on a large corpus of text, learning contextualized word embeddings. Fine-tuning allows you to leverage this pre-trained knowledge for a specific task, such as text classification.
+											
+											Here are the general steps involved in fine-tuning BERT for text classification:</p>
+										
+											<h3>Fine Tune progress</h3>
+											<p>Fine tune arguments</p>
+											<span class="image fit"><img src="SentimentAnalysisImages/bert training args.png" alt="bertmodelprogress" /></span>
+											<span class="image fit"><img src="SentimentAnalysisImages/berttrainingprog.png" alt="bertmodelprogress" /></span>
+
+											<h2>Code</h2>
+                                        <a href="https://github.com/Shouvik-7/stock-market-analysis">https://github.com/Shouvik-7/stock-market-analysis</a>
+									<hr class="major" />
+									
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="introduction.html">Introduction</a></li>
+										
+										<li>
+											<span class="opener">Sentiment Analysis</span>
+											<ul>
+												<li><a href="sadataprep.html">Data and prep</a></li>
+												<li><a href="saanalysis.html">Analysis</a></li>
+												<li><a href="saresults.html">Results</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Stock Forecasting</span>
+											<ul>
+												<li><a href="stockpreddataprep.html">Data and prep</a></li>
+												<li><a href="stockmarketanalysis.html">Analysis</a></li>
+												<li><a href="stockmarketresults.html">Results</a></li>
+											</ul>
+										</li>
+										<li><a href="conclusion.html">Conclusion</a></li>
+
+									</ul>
+								</nav>
+
+						
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>About</h2>
+									</header>
+									<p>Name: Shouvik Sengupta</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="shouvik.sengupta@colorado.edu">shouvik.sengupta@colorado.edu</a></li>
+										<li class="icon solid fa-home">Boulder, CU 80303</li>
+										<ul class="icons">
+											
+											<li><a href="https://www.linkedin.com/in/shouvik-sengupta-s17/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+										</ul>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash, pexels</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Editorial by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Home</strong></a>
+									
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Data</h1>
+									</header>
+
+									<!-- Content -->
+										<h2 id="content">Data</h2>
+										<a href="https://www.kaggle.com/datasets/equinxx/stock-tweets-for-sentiment-analysis-and-prediction">https://www.kaggle.com/datasets/equinxx/stock-tweets-for-sentiment-analysis-and-prediction</a>
+										<p></p>
+										<h4>df</h4>
+										<div class="table-wrapper">
+											
+											<h2>Raw Dataframe</h2>
+											<span class="image fit"><img src="StockmarketImages/tweetsraw.png" alt="raw_dataset" /></span>
+											<h2>Stocks price yfinance api</h2>
+											<span class="image fit"><img src="StockmarketImages/stockapi.png" alt="raw_dataset" /></span>
+											<span class="image fit"><img src="StockmarketImages/applstocks.png" alt="aaplstocks" /></span>
+											
+											<h2>merged_df</h2>
+											<span class="image fit"><img src="StockmarketImages/finaldata.png" alt="merged_df" /></span>
+											<p>The raw dataframe and the data from api collected for APPL are merged to form the merged_df. The merging is on date feature with frequency set to daily. The tweets related to APPL is also passed through the finetuned BERT sentiment classifier to find sentiment and averaged to find the score for a particular date. The stock market movement is the difference between the current closing price and previous day close price and set to 1 if it is positive and 0 if negative or 0.</p>
+											
+											<h3>CODE:</h3>
+											<a href="https://github.com/Shouvik-7/stock_market_movement_predictor/blob/main/DataCleanPrepfortwitterstocksentiment.ipynb">https://github.com/Shouvik-7/stock_market_movement_predictor/blob/main/DataCleanPrepfortwitterstocksentiment.ipynb</a>
+											<p></p>
+											<h3>DATA:</h3>
+											<a href="https://github.com/Shouvik-7/stock_market_movement_predictor/blob/main/merged_df.csv">https://github.com/Shouvik-7/stock_market_movement_predictor/blob/main/merged_df.csv</a>
+											<p></p>
+											<h2>Data Preparation for Stock Market Movement prdiction Using LSTM</h2>
+											
+                                            <div class="box alt">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-4">
+														<h2>X_train_c</h2>
+                                                        <p>X_train_c shape: (214,5,1)</p>
+											            <span class="image fit"><img src="StockmarketImages/X_test_c.png" alt="raw_dataset" /></span>
+											
+													</div>
+													<div class="col-4">
+														<h2>X_test_c</h2>
+                                                        <p>X_test_c shape: (30,5,1)</p>
+											            <span class="image fit"><img src="StockmarketImages/X_test_c.png" alt="raw_dataset" /></span>
+													</div>
+												
+													
+												</div>
+											</div>
+                                            <p>The X_train_c comprises of the closing price of the stock. The prices are normalized using min max scaler. The previous 5 days closing price of the stock is used to form a window.</p>
+                                            <div class="box alt">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-4">
+														<h2>X_train_s</h2>
+                                                        <p>X_train_s shape: (214,1)</p>
+											            <span class="image fit"><img src="StockmarketImages/X_train_s.png" alt="raw_dataset" /></span>
+											
+													</div>
+													<div class="col-4">
+														<h2>X_test_s</h2>
+                                                        <p>X_test_s shape: (30,1)</p>
+											            <span class="image fit"><img src="StockmarketImages/X_test_s.png" alt="raw_dataset" /></span>
+													</div>
+												
+													
+												</div>
+											</div>
+											<p>The X_train_s comprises of the sentiments of the stock. The sentiments are normalized. It is then divided into train test split.</p>
+                                            
+											<div class="box alt">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-4">
+														<h2>y_train</h2>
+														<span class="image fit"><img src="StockmarketImages/y_train.png" alt="raw_dataset" /></span>
+													</div>
+													<div class="col-4">
+														<h2>y_test</h2>
+														<span class="image fit"><img src="StockmarketImages/y_test.png" alt="raw_dataset" /></span>
+													</div>
+												
+													
+												</div>
+											</div>
+											<p>The stock movement describes the whether the closing price of the stock has increase denoted by 1 or decreased denoted by 0.</p>
+										</div>	
+										
+									<hr class="major" />
+									
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="introduction.html">Introduction</a></li>
+										
+										<li>
+											<span class="opener">Sentiment Analysis</span>
+											<ul>
+												<li><a href="sadataprep.html">Data and prep</a></li>
+												<li><a href="saanalysis.html">Analysis</a></li>
+												<li><a href="saresults.html">Results</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Stock Forecasting</span>
+											<ul>
+												<li><a href="stockpreddataprep.html">Data and prep</a></li>
+												<li><a href="stockmarketanalysis.html">Analysis</a></li>
+												<li><a href="stockmarketresults.html">Results</a></li>
+											</ul>
+										</li>
+										<li><a href="conclusion.html">Conclusion</a></li>
+
+									</ul>
+								</nav>
+
+						
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>About</h2>
+									</header>
+									<p>Name: Shouvik Sengupta</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="shouvik.sengupta@colorado.edu">shouvik.sengupta@colorado.edu</a></li>
+										<li class="icon solid fa-home">Boulder, CU 80303</li>
+										<ul class="icons">
+											
+											<li><a href="https://www.linkedin.com/in/shouvik-sengupta-s17/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+										</ul>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash, pexels</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
